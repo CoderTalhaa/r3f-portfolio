@@ -7,6 +7,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { IoLogoDiscord } from "react-icons/io5";
 import Skills from "../../About/Skills";
 import Contact from "../../Contact/Contact";
+import logo from "/public/talha.png"
 
 function Overlay() {
   useEffect(() => {
@@ -26,7 +27,7 @@ function Overlay() {
           <nav className="py-10 mb-16 flex justify-between ">
             <img
               className="h-20 object-cover transition ease-in duration-200 hover:scale-150 "
-              src="/public/talha.png"
+              src={logo}
               alt=""
             />
             <ul className="flex items-center">
