@@ -7,7 +7,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { IoLogoDiscord } from "react-icons/io5";
 import Skills from "../../About/Skills";
 import Contact from "../../Contact/Contact";
-import logo from "/public/talha.png"
+import logo from "/images/talha.png"
 
 function Overlay() {
   useEffect(() => {
