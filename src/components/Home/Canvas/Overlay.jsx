@@ -26,7 +26,7 @@ function Overlay() {
           <nav className="py-10 mb-16 flex justify-between ">
             <img
               className="h-20 object-cover transition ease-in duration-200 hover:scale-150 "
-              src="/src/assets/talha.png"
+              src="/public/talha.png"
               alt=""
             />
             <ul className="flex items-center">
