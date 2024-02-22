@@ -1,4 +1,3 @@
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
 import baffle from "baffle";
 import { useEffect } from "react";
@@ -32,8 +31,7 @@ function Overlay() {
             />
             <ul className="flex items-center">
               <li>
-                {" "}
-                <BsFillMoonStarsFill className="cursor-pointer text-xl" />{" "}
+              
               </li>
             </ul>
           </nav>
