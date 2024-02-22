@@ -1,7 +1,7 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
 import baffle from "baffle";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { IoLogoDiscord } from "react-icons/io5";
