@@ -8,7 +8,10 @@ function Home() {
     <div className=" w-full h-screen bg-myColor ">
       <Suspense fallback={<Loading />}>
         <div className="absolute top-[3.5rem] right-0  z-50 text-right">
-          <NavLink to="projects" className="text-xl font-Anto text-primary pr-1 lg:pr-10" >
+          <NavLink
+            to="projects"
+            className="text-xl font-Anto text-primary pr-1 lg:pr-10"
+          >
             PROJECTS
           </NavLink>
         </div>
