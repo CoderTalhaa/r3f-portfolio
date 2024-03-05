@@ -11,7 +11,7 @@ function Experience() {
   
   return (
     <>
-      <OrbitControls enableZoom={false} />
+      {/* <OrbitControls enableZoom={false} /> */}
       <Float floatIntensity={2} speed={3}>
         <Icomore scale={0.9} />
       </Float>
