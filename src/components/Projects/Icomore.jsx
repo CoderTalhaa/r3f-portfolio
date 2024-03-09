@@ -17,7 +17,7 @@ export function Icomore(props) {
   });
 
   return (
-    <group {...props} dispose={null} ref={group}>
+    <group {...props} dispose={null} ref={group} castShadow>
       <group name="Platonic_fracturepart1" position={[0.449, 0.493, -0.097]}>
         <mesh
           name="Platonic_fracturepart1_1"

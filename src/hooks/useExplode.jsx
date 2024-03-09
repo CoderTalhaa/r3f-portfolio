@@ -40,19 +40,19 @@ export const useExplode = (group, { distance = 3, enableRotation = true }) => {
 
   useFrame(() => {
     group.current.children.forEach((mesh) => {
-    //   if (scrollData.offset < 0.0001) {
-    //     if (mesh.name === "origin") {
-    //       mesh.visible = true;
-    //     } else {
-    //       mesh.visible = false;
-    //     }
-    //   } else {
-    //     if (mesh.name === "origin") {
-    //       mesh.visible = false;
-    //     } else {
-    //       mesh.visible = true;
-    //     }
-    //   }
+      //   if (scrollData.offset < 0.0001) {
+      //     if (mesh.name === "origin") {
+      //       mesh.visible = true;
+      //     } else {
+      //       mesh.visible = false;
+      //     }
+      //   } else {
+      //     if (mesh.name === "origin") {
+      //       mesh.visible = false;
+      //     } else {
+      //       mesh.visible = true;
+      //     }
+      //   }
 
       mesh.position.x = THREE.MathUtils.lerp(
         mesh.originalPosition.x,
@@ -89,7 +89,4 @@ export const useExplode = (group, { distance = 3, enableRotation = true }) => {
       }
     });
   });
-
-
-  
 };

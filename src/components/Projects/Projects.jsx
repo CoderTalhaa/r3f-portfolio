@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import Experience from "./Experience"
-import { ScrollControls } from "@react-three/drei"
+import { Loader, ScrollControls } from "@react-three/drei"
 import { Suspense } from "react"
 
 function Projects() {
@@ -14,6 +14,7 @@ function Projects() {
           </Suspense>
         </ScrollControls>
       </Canvas>
+      <Loader />
     </div>
   )
 }
