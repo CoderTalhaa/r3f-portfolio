@@ -19,16 +19,16 @@ function Experience() {
       {/* <OrbitControls enableZoom={false} /> */}
       <Float floatIntensity={2} speed={3}>
         <Icomore scale={0.9} />
+      </Float>
         <ContactShadows
           opacity={1}
-          scale={50}
+          scale={40}
           blur={1}
           far={10}
           resolution={256}
           color="#ffffff"
           position={[0, -2, 0]}
         />
-      </Float>
       <Environment preset="studio" />
 
       <RoundedBox
