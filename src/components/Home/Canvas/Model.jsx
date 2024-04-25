@@ -1,71 +1,31 @@
 /* eslint-disable react/no-unknown-property */
 
-
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 export function Model(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/models/banana.glb");
   const { actions } = useAnimations(animations, group);
 
-  const scroll = useScroll()
-  const tl = useRef()
+  const scroll = useScroll();
 
-  useFrame(() => {
-    if(tl.current){
-      tl.current.seek(scroll.offset * tl.current.duration());
+  useEffect(
+    () =>
+      void (actions["Emote Acrobatic Superhero"].reset().play().paused = true),
+    []
+  );
+  useFrame(
+    () =>
+      (actions["Emote Acrobatic Superhero"].time =
+        actions["Emote Acrobatic Superhero"].getClip().duration *
+        scroll.offset *
+        0.5)
+  );
 
-    }
-  })
-
-  
-
-  useGSAP(() => {
-    tl.current = gsap.timeline({ defaults: {ease: 'power1.inOut' } });
-  
-    // //! Define the first animation
-    tl.current.to(group.current.position, {
-      x: 0,
-      duration: 2,
-   
-    })
-
-    tl.current.to(group.current.rotation, {
-      y: 0.277,
-      duration: 2,
-      
-    })
-
-    tl.current.to(group.current.position, {
-      onComplete: () => {
-        // Play the animation after the first timeline completes
-        if (actions["Emote Acrobatic Superhero"]) {
-          // Play the animation
-          actions["Emote Acrobatic Superhero"].play();
-          
-          setTimeout(() => {
-
-            actions["Emote Acrobatic Superhero"].stop();
-          },5000)
-        }
-      }
-    })
-
-  });
-
-
-  useEffect(() =>{
-    // actions["Emote Acrobatic Superhero"].play()
-    // actions["Emote AfroHouse"].play()
-    // actions["Emote Boogie Down"].play()
-    // actions["Emote Boogie Down"].stop()
-  },[actions])
   return (
-    <group ref={group} {...props}  dispose={null}>
+    <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group
           name="Sketchfab_model"
